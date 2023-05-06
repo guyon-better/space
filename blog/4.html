@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10 分钟掌握浏览器运行 JS 的顺序 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/space/assets/css/0.styles.44c8a9cb.css" as="style"><link rel="preload" href="/space/assets/js/app.c334109e.js" as="script"><link rel="preload" href="/space/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/space/assets/js/19.efd9e707.js" as="script"><link rel="prefetch" href="/space/assets/js/10.d3dbcd01.js"><link rel="prefetch" href="/space/assets/js/11.419a1f1a.js"><link rel="prefetch" href="/space/assets/js/12.b9c16781.js"><link rel="prefetch" href="/space/assets/js/13.e25e3787.js"><link rel="prefetch" href="/space/assets/js/14.b4f61ea2.js"><link rel="prefetch" href="/space/assets/js/15.bebbaa9f.js"><link rel="prefetch" href="/space/assets/js/16.c43e8ad7.js"><link rel="prefetch" href="/space/assets/js/17.f2e1347b.js"><link rel="prefetch" href="/space/assets/js/18.5d362097.js"><link rel="prefetch" href="/space/assets/js/20.19342614.js"><link rel="prefetch" href="/space/assets/js/21.c4132e43.js"><link rel="prefetch" href="/space/assets/js/22.c8d95e73.js"><link rel="prefetch" href="/space/assets/js/23.9a276b89.js"><link rel="prefetch" href="/space/assets/js/24.90abfcc9.js"><link rel="prefetch" href="/space/assets/js/25.1da64438.js"><link rel="prefetch" href="/space/assets/js/26.e8493b44.js"><link rel="prefetch" href="/space/assets/js/27.7b13507c.js"><link rel="prefetch" href="/space/assets/js/3.40aa7a3d.js"><link rel="prefetch" href="/space/assets/js/4.da3ef268.js"><link rel="prefetch" href="/space/assets/js/5.dac787d8.js"><link rel="prefetch" href="/space/assets/js/6.820ab661.js"><link rel="prefetch" href="/space/assets/js/7.b04aeb28.js"><link rel="prefetch" href="/space/assets/js/8.8733fc27.js"><link rel="prefetch" href="/space/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/space/assets/css/0.styles.44c8a9cb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/space/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/space/blog/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/space/blog/15.html" class="sidebar-link">🐵好让人傻傻分不清—JS篇</a></li><li><a href="/space/blog/14.html" class="sidebar-link">🐭好让人傻傻分不清—DOM篇</a></li><li><a href="/space/blog/13.html" class="sidebar-link">🐯好让人傻傻分不清—CSS篇</a></li><li><a href="/space/blog/12.html" class="sidebar-link">这么多年你还在怕正则吗？</a></li><li><a href="/space/blog/11.html" class="sidebar-link">来用Vite+React快速开发浏览器插件</a></li><li><a href="/space/blog/10.html" class="sidebar-link">众所周知的浏览器调试操作</a></li><li><a href="/space/blog/9.html" class="sidebar-link">简单的元素滚动组件</a></li><li><a href="/space/blog/8.html" class="sidebar-link">来一个简单二维码生成器</a></li><li><a href="/space/blog/7.html" class="sidebar-link">用 CSS 找回童年的快乐，哆啦A梦伴你同行</a></li><li><a href="/space/blog/6.html" class="sidebar-link">520， 学废 new 对象的过程</a></li><li><a href="/space/blog/5.html" class="sidebar-link">这个&quot;this&quot;到底是什么</a></li><li><a href="/space/blog/4.html" aria-current="page" class="active sidebar-link">10 分钟掌握浏览器运行 JS 的顺序</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/space/blog/3.html" class="sidebar-link">防抖节流看这篇就够了</a></li><li><a href="/space/blog/2.html" class="sidebar-link">是时候用闭包实现一个缓存函数了</a></li><li><a href="/space/blog/1.html" class="sidebar-link">不得不知的闭包</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_10-分钟掌握浏览器运行-js-的顺序"><a href="#_10-分钟掌握浏览器运行-js-的顺序" class="header-anchor">#</a> 10 分钟掌握浏览器运行 JS 的顺序</h1> <h3 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h3> <p>不知道你有没有遇到过类似这样的问题，某些代码乱序执行或样式的更改后不生效？你是不是曾经把代码包在 setTimeout 里面来解决类似的问题？是不是这种方式不太可靠？然后你就不断调试 timeout 值以至于看起来好像没问题了？接下来我们将一起来看一下这其中到底发生了什么。</p> <h3 id="进程和线程"><a href="#进程和线程" class="header-anchor">#</a> 进程和线程</h3> <p>我们先来区分一下进程和线程</p> <ul><li>进程是 cpu 资源分配的最小单位（是能拥有资源和独立运行的最小单位）</li> <li>线程是 cpu 调度的最小单位（线程是建立在进程的基础上的一次程序运行单位，一个进程中可以有多个线程）</li></ul> <p>通俗地讲：进程就像是一个有边界的生产厂间，而线程就像是厂间内的一个个员工，可以自己做自己的事情，也可以相互配合做同一件事情，所以<strong>一个进程可以创建多个线程</strong>。</p> <p>理解了进程与线程了区别后，接下来对浏览器进行一定程度上的认识：</p> <h4 id="浏览器的多进程"><a href="#浏览器的多进程" class="header-anchor">#</a> 浏览器的多进程</h4> <p>它主要包括以下进程：</p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d756d17b49f4964a38131927ade6fc5~tplv-k3u1fbpfcp-watermark.image" alt="浏览器进程.png"></p> <ul><li>浏览器是多进程的</li> <li>浏览器之所以能够运行，是因为系统给它的进程分配了资源（CPU、内存）</li> <li>简单点理解，每打开一个 Tab 页，就相当于创建了一个独立的浏览器进程。</li></ul> <h4 id="渲染进程-浏览器内核"><a href="#渲染进程-浏览器内核" class="header-anchor">#</a> 渲染进程（浏览器内核）</h4> <p>对于普通的前端操作来说，最重要的是渲染进程，页面的渲染，JS 的执行，事件的循环，都在这个进程内进行。接下来我们重点分析这个进程。<strong>注意：浏览器的渲染进程是多线程的。</strong>
+接下来看看它都包含了哪些线程（列举一些主要常驻线程）：</p> <p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3343281954a340cfa0396917b39a8fb5~tplv-k3u1fbpfcp-watermark.image" alt="渲染线程.png"></p> <h3 id="单线程的-js"><a href="#单线程的-js" class="header-anchor">#</a> 单线程的 JS</h3> <blockquote><p>JavaScript 单线程指的是浏览器中负责解释和执行 JavaScript 代码的只有一个主线程，即为 JS 引擎线程，每次只能做一件事。</p></blockquote> <p>我们知道一个 AJAX 请求，主线程在等待它响应的同时是会去做其它事的，浏览器先在事件表注册 AJAX 的回调函数，响应回来后回调函数被添加到<strong>任务队列</strong>中等待执行，不会造成线程阻塞，所以说 JS 处理 AJAX 请求的方式是异步的。</p> <p>JavaScript 的单线程，与它的用途有关。作为浏览器脚本语言，其主要用途是与用户互动，以及操作 DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。假设同时有两个线程，一个线程在某个 DOM 节点上添加内容，另一个线程删除了这个节点，那就乱套了。
+我们可以来看下面的例子：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">baz</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">baz</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'baz'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// baz</span>
+<span class="token comment">// bar</span>
+<span class="token comment">// foo</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// foo</span>
+<span class="token comment">// setTimeout: 0s</span>
+</code></pre></div><h3 id="任务队列"><a href="#任务队列" class="header-anchor">#</a> 任务队列</h3> <p>任务队列是指一个事件的队列（消息队列），<strong>先进先出的数据结构</strong>，排在前面的事件，优先被主线程读取。只要执行栈上任务一清空，就会被主线程读取，任务队列上首位的事件就自动进入主线程。</p> <p>任务又分成两种，一种是同步任务，另一种是异步任务。</p> <ul><li><strong>同步任务</strong>，在主线程形成一个执行栈，排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；</li> <li><strong>异步任务</strong>，不进入主线程，而进入任务队列的任务，只有任务队列通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。</li></ul> <p>另外事件循环中的异步任务队列有两种：<strong>macroTask（宏任务）队列</strong>和 <strong>microTask（微任务）队列</strong>。</p> <h4 id="宏任务队列"><a href="#宏任务队列" class="header-anchor">#</a> 宏任务队列</h4> <ul><li>DOM 事件</li> <li>XHR</li> <li>定时器（setTimeout / setInterval / setImmediate）</li></ul> <p>可以通过 setTimeout(func) 即可将 func 添加到宏任务队列中（使用场景：将计算耗时长的任务切分成小块，以便于浏览器有空处理用户事件，以及显示耗时进度）。</p> <h4 id="微任务队列"><a href="#微任务队列" class="header-anchor">#</a> 微任务队列</h4> <ul><li>Promise 事件</li> <li>MutationObserver</li> <li>process.nextTick 事件（Node.js）</li></ul> <p>可以通过 queueMicrotask(func) 将 func 添加到微任务队列中。</p> <h3 id="事件循环"><a href="#事件循环" class="header-anchor">#</a> 事件循环</h3> <blockquote><p>JS 主线程循环往复地从任务队列（callback queue / task queue）中读取任务，执行任务，其中运行机制称为事件循环（event loop）。</p></blockquote> <p>在事件表 Web APIs 中会注册各类事件线程处理各种事件，然后将<strong>处理好的回调事件放入对应的任务队列（宏任务、微任务）<strong>中。如果执行栈里的任务执行完成，即</strong>执行栈为空的时候（JS 引擎线程空闲），事件触发线程才会从任务队列取出一个任务（即异步的回调函数）放入执行栈中执行</strong>。具体的流程可以参考下图：
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1200f38f79294ea683e5c3f815c6de6e~tplv-k3u1fbpfcp-zoom-1.image" alt="事件循环.png"></p> <h4 id="运行机制"><a href="#运行机制" class="header-anchor">#</a> 运行机制</h4> <ul><li>执行一个宏任务（栈中没有就从事件队列中获取）</li> <li>执行过程中如果遇到微任务，就将它添加到微任务的任务队列中</li> <li>宏任务执行完毕后，立即执行当前微任务队列中的所有微任务（依次执行）</li> <li>当前宏任务执行完毕，开始检查渲染，然后 GUI 线程接管渲染</li> <li>渲染完毕后，JS 线程继续接管，开始下一个宏任务（从事件队列中获取）</li></ul> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff1e281ce7324d018987db8ebade668a~tplv-k3u1fbpfcp-zoom-1.image" alt="事件循环流程图.png"></p> <h4 id="settimeout"><a href="#settimeout" class="header-anchor">#</a> setTimeout</h4> <p>我们一起来看下面的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 调用 setTimeout 函数，将其回调函数放入宏任务队列</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// script start</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// setTimeout</span>
+</code></pre></div><h4 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h4> <ul><li>Promise 本身是<strong>同步的立即执行函数</strong>， 当在 executor 中执行 resolve 或者 reject 的时候，此时是异步操作，会先执行 then/catch 等（<strong>即 then/catch 里面的东西才是异步执行的部分</strong>）。当主栈完成后，才会去任务队列中调用 resolve/reject 中存放的回调方法执行，返回一个 Promise 实例。</li></ul> <p>多说无益，我们来看下面的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Promise 将其回调函数 then 放入微任务队列</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 同上</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// script start</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// promise2</span>
+</code></pre></div><h4 id="async-await"><a href="#async-await" class="header-anchor">#</a> async/await</h4> <ul><li>async/await 本质上还是基于 Promise 的封装。</li> <li>async 总是返回一个 Promise。</li> <li>async 函数在 await 之前的代码都是同步执行的，可以理解为 await 之前的代码相当于 Promise executor 中的代码，await 之后的所有代码都是在 Promise.then 中的回调。</li> <li>await 返回 Promise 对象的处理结果。如果后面等待的不是 Promise 对象，则返回该值本身。</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> <span class="token number">2</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+等价于
+
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>接着，我们来看一下下面的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 start'</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 		<span class="token comment">// 执行 async2，暂停整个 async 函数的执行并让出执行栈</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 end'</span><span class="token punctuation">)</span>	<span class="token comment">// Promise.then 将其加入微任务队列</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">await</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// script start</span>
+<span class="token comment">// async1 start</span>
+<span class="token comment">// async2</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// async1 end</span>
+</code></pre></div><h3 id="牛刀小试"><a href="#牛刀小试" class="header-anchor">#</a> 牛刀小试</h3> <p>最后放几道题大家一起来考察一下自己的掌握程度吧。</p> <h4 id="第一题"><a href="#第一题" class="header-anchor">#</a> 第一题</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">await</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// script start</span>
+<span class="token comment">// async1 start</span>
+<span class="token comment">// async2</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// promise2</span>
+<span class="token comment">// async1 end</span>
+<span class="token comment">// setTimeout</span>
+</code></pre></div><h4 id="第二题"><a href="#第二题" class="header-anchor">#</a> 第二题</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 start'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">await</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1 end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">// script start</span>
+<span class="token comment">// promise3</span>
+<span class="token comment">// async1 start</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// promise4</span>
+<span class="token comment">// promise2</span>
+<span class="token comment">// async1 end</span>
+<span class="token comment">// setTimeout</span>
+</code></pre></div><h4 id="第三题"><a href="#第三题" class="header-anchor">#</a> 第三题</h4> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script start'</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout3'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+
+Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise1'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'async1'</span><span class="token punctuation">)</span>
+    <span class="token keyword">await</span> <span class="token function">setTimeout2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout1'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">setTimeout2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setTimeout2'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">async1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">let</span> promise2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'promise2.then'</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise2'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+promise2<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'promise3'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'script end'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// script start</span>
+<span class="token comment">// async1</span>
+<span class="token comment">// promise2</span>
+<span class="token comment">// script end</span>
+<span class="token comment">// promise1</span>
+<span class="token comment">// promise2.then</span>
+<span class="token comment">// promise3</span>
+<span class="token comment">// setTimeout3</span>
+<span class="token comment">// setTimeout2</span>
+<span class="token comment">// setTimeout1</span>
+</code></pre></div><p>完结</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/space/blog/5.html" class="prev">
+        这个&quot;this&quot;到底是什么
+      </a></span> <span class="next"><a href="/space/blog/3.html">
+        防抖节流看这篇就够了
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/space/assets/js/app.c334109e.js" defer></script><script src="/space/assets/js/2.733019b2.js" defer></script><script src="/space/assets/js/19.efd9e707.js" defer></script>
+  </body>
+</html>

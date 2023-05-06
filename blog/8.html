@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>来一个简单二维码生成器 | 学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/space/assets/css/0.styles.44c8a9cb.css" as="style"><link rel="preload" href="/space/assets/js/app.c334109e.js" as="script"><link rel="preload" href="/space/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/space/assets/js/23.9a276b89.js" as="script"><link rel="prefetch" href="/space/assets/js/10.d3dbcd01.js"><link rel="prefetch" href="/space/assets/js/11.419a1f1a.js"><link rel="prefetch" href="/space/assets/js/12.b9c16781.js"><link rel="prefetch" href="/space/assets/js/13.e25e3787.js"><link rel="prefetch" href="/space/assets/js/14.b4f61ea2.js"><link rel="prefetch" href="/space/assets/js/15.bebbaa9f.js"><link rel="prefetch" href="/space/assets/js/16.c43e8ad7.js"><link rel="prefetch" href="/space/assets/js/17.f2e1347b.js"><link rel="prefetch" href="/space/assets/js/18.5d362097.js"><link rel="prefetch" href="/space/assets/js/19.efd9e707.js"><link rel="prefetch" href="/space/assets/js/20.19342614.js"><link rel="prefetch" href="/space/assets/js/21.c4132e43.js"><link rel="prefetch" href="/space/assets/js/22.c8d95e73.js"><link rel="prefetch" href="/space/assets/js/24.90abfcc9.js"><link rel="prefetch" href="/space/assets/js/25.1da64438.js"><link rel="prefetch" href="/space/assets/js/26.e8493b44.js"><link rel="prefetch" href="/space/assets/js/27.7b13507c.js"><link rel="prefetch" href="/space/assets/js/3.40aa7a3d.js"><link rel="prefetch" href="/space/assets/js/4.da3ef268.js"><link rel="prefetch" href="/space/assets/js/5.dac787d8.js"><link rel="prefetch" href="/space/assets/js/6.820ab661.js"><link rel="prefetch" href="/space/assets/js/7.b04aeb28.js"><link rel="prefetch" href="/space/assets/js/8.8733fc27.js"><link rel="prefetch" href="/space/assets/js/9.76eb16d3.js">
+    <link rel="stylesheet" href="/space/assets/css/0.styles.44c8a9cb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/space/" class="home-link router-link-active"><!----> <span class="site-name">学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/space/blog/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/space/blog/15.html" class="sidebar-link">🐵好让人傻傻分不清—JS篇</a></li><li><a href="/space/blog/14.html" class="sidebar-link">🐭好让人傻傻分不清—DOM篇</a></li><li><a href="/space/blog/13.html" class="sidebar-link">🐯好让人傻傻分不清—CSS篇</a></li><li><a href="/space/blog/12.html" class="sidebar-link">这么多年你还在怕正则吗？</a></li><li><a href="/space/blog/11.html" class="sidebar-link">来用Vite+React快速开发浏览器插件</a></li><li><a href="/space/blog/10.html" class="sidebar-link">众所周知的浏览器调试操作</a></li><li><a href="/space/blog/9.html" class="sidebar-link">简单的元素滚动组件</a></li><li><a href="/space/blog/8.html" aria-current="page" class="active sidebar-link">来一个简单二维码生成器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/space/blog/8.html#背景" class="sidebar-link">背景</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#实现效果" class="sidebar-link">实现效果</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#安装依赖" class="sidebar-link">安装依赖</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#搞下交互" class="sidebar-link">搞下交互</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#生成二维码" class="sidebar-link">生成二维码</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#下载二维码图片" class="sidebar-link">下载二维码图片</a></li><li class="sidebar-sub-header"><a href="/space/blog/8.html#体验一下" class="sidebar-link">体验一下</a></li></ul></li><li><a href="/space/blog/7.html" class="sidebar-link">用 CSS 找回童年的快乐，哆啦A梦伴你同行</a></li><li><a href="/space/blog/6.html" class="sidebar-link">520， 学废 new 对象的过程</a></li><li><a href="/space/blog/5.html" class="sidebar-link">这个&quot;this&quot;到底是什么</a></li><li><a href="/space/blog/4.html" class="sidebar-link">10 分钟掌握浏览器运行 JS 的顺序</a></li><li><a href="/space/blog/3.html" class="sidebar-link">防抖节流看这篇就够了</a></li><li><a href="/space/blog/2.html" class="sidebar-link">是时候用闭包实现一个缓存函数了</a></li><li><a href="/space/blog/1.html" class="sidebar-link">不得不知的闭包</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="来一个简单二维码生成器"><a href="#来一个简单二维码生成器" class="header-anchor">#</a> 来一个简单二维码生成器</h1> <h2 id="背景"><a href="#背景" class="header-anchor">#</a> 背景</h2> <p>日常中经常遇到一些 PC 上的 <code>url</code> 或者 <code>id</code>想要传送到移动端，或者要更便捷的方式传播数据，这时候就要用到手机扫二维码的情况。</p> <h2 id="实现效果"><a href="#实现效果" class="header-anchor">#</a> 实现效果</h2> <p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd78a6c48c2643d8ad7754d53c3ba80f~tplv-k3u1fbpfcp-zoom-1.image" alt=""></p> <h2 id="安装依赖"><a href="#安装依赖" class="header-anchor">#</a> 安装依赖</h2> <p>我们将使用 <code>qrcode</code> npm 包去生成二维码，执行以下命令安装好依赖。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--save</span> qrcode
+</code></pre></div><h2 id="搞下交互"><a href="#搞下交互" class="header-anchor">#</a> 搞下交互</h2> <p>支持修改二维码内容、二维码描述，简简单单搞下交互。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> QRCode <span class="token keyword">from</span> <span class="token string">'qrcode'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> styles <span class="token keyword">from</span> <span class="token string">'./style.less'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>qrcodeContent<span class="token punctuation">,</span> setQrcodeContent<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>qrcodeDesc<span class="token punctuation">,</span> setQrcodeDesc<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>container<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>生成二维码<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>inputItem<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>label htmlFor<span class="token operator">=</span><span class="token string">&quot;qrcodeContent&quot;</span><span class="token operator">&gt;</span>二维码内容<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input
+          id<span class="token operator">=</span><span class="token string">&quot;qrcodeContent&quot;</span>
+          type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+          placeholder<span class="token operator">=</span><span class="token string">&quot;请输入二维码内容&quot;</span>
+          value<span class="token operator">=</span><span class="token punctuation">{</span>qrcodeContent<span class="token punctuation">}</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token function">setQrcodeContent</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>inputItem<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>label htmlFor<span class="token operator">=</span><span class="token string">&quot;qrcodeDesc&quot;</span><span class="token operator">&gt;</span>二维码描述<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token operator">/</span>label<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input
+          id<span class="token operator">=</span><span class="token string">&quot;qrcodeDesc&quot;</span>
+          type<span class="token operator">=</span><span class="token string">&quot;text&quot;</span>
+          placeholder<span class="token operator">=</span><span class="token string">&quot;请输入描述内容&quot;</span>
+          value<span class="token operator">=</span><span class="token punctuation">{</span>qrcodeDesc<span class="token punctuation">}</span>
+          onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token function">setQrcodeDesc</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">.</span>btnContainer<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input
+          type<span class="token operator">=</span><span class="token string">&quot;button&quot;</span>
+          value<span class="token operator">=</span><span class="token string">&quot;生成二维码&quot;</span>
+          onClick<span class="token operator">=</span><span class="token punctuation">{</span>generateQRCode<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>input
+          type<span class="token operator">=</span><span class="token string">&quot;button&quot;</span>
+          value<span class="token operator">=</span><span class="token string">&quot;下载二维码&quot;</span>
+          onClick<span class="token operator">=</span><span class="token punctuation">{</span>downloadQRCode<span class="token punctuation">}</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+      <span class="token operator">&lt;</span>canvas id<span class="token operator">=</span><span class="token string">&quot;canvas&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><h2 id="生成二维码"><a href="#生成二维码" class="header-anchor">#</a> 生成二维码</h2> <p>接下来，我们用<code>input</code> 去获取二维码显示的内容，将输入的内容生成对应二维码。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> QRCode <span class="token keyword">from</span> <span class="token string">'qrcode'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> styles <span class="token keyword">from</span> <span class="token string">'./style.less'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>qrcodeContent<span class="token punctuation">,</span> setQrcodeContent<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>qrcodeDesc<span class="token punctuation">,</span> setQrcodeDesc<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 根据输入框内容，生成对应二维码
+   */</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">generateQRCode</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> canvasElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> canvas <span class="token operator">=</span> <span class="token keyword">await</span> QRCode<span class="token punctuation">.</span><span class="token function">toCanvas</span><span class="token punctuation">(</span>canvasElement<span class="token punctuation">,</span> qrcodeContent<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">let</span> canvasContext <span class="token operator">=</span> canvas<span class="token operator">?.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> canvasWidth <span class="token operator">=</span> canvas<span class="token operator">?.</span>width
+
+    canvasContext<span class="token punctuation">.</span>textAlign <span class="token operator">=</span> <span class="token string">'center'</span>
+    canvasContext<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">'20px serif'</span>
+    canvasContext<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span>qrcodeDesc<span class="token punctuation">,</span> canvasWidth <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><h2 id="下载二维码图片"><a href="#下载二维码图片" class="header-anchor">#</a> 下载二维码图片</h2> <p>最后，我们将 <code>canvas</code> 转换成 <code>base64</code> 图片，修改 MIME (媒体类型)，动态生成 <code>a</code> 标签下载图片。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 下载二维码
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">downloadQRCode</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> qrCodeURL <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">toDataURL</span><span class="token punctuation">(</span><span class="token string">&quot;image/png&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">&quot;image/png&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;application/octet-stream&quot;</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> aEle <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  aEle<span class="token punctuation">.</span>href <span class="token operator">=</span> qrCodeURL<span class="token punctuation">;</span>
+  aEle<span class="token punctuation">.</span>download <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>qrcodeContent<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.png</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>aEle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  aEle<span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>aEle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="体验一下"><a href="#体验一下" class="header-anchor">#</a> 体验一下</h2> <p>完整的代码我放在 <a href="https://codepen.io/guyon/pen/rNJBzEb" target="_blank" rel="noopener noreferrer">Code Pen<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 上了，有感兴趣的同学可以看看。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/space/blog/9.html" class="prev">
+        简单的元素滚动组件
+      </a></span> <span class="next"><a href="/space/blog/7.html">
+        用 CSS 找回童年的快乐，哆啦A梦伴你同行
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/space/assets/js/app.c334109e.js" defer></script><script src="/space/assets/js/2.733019b2.js" defer></script><script src="/space/assets/js/23.9a276b89.js" defer></script>
+  </body>
+</html>
